@@ -1,0 +1,125 @@
+/* EventCalendar.css */
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  background-color:  #ffffff;
+  border: 1px solid  #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-title {
+  text-align: center;
+  color:  #044554;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.view-mode-buttons {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 20px;
+}
+
+.view-mode-buttons > button {
+  margin: 0 10px;
+}
+
+.dialog-content {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-content > * {
+  margin-bottom: 10px;
+}
+
+.dialog-actions {
+  justify-content: space-between;
+}
+
+.Scheduler {
+    background-color:#ccc;
+}
+.scheduler .day {
+  overflow: auto; /* Asegúrate de que los eventos adicionales sean visibles */
+  max-height: none; /* Permite que el contenedor crezca para acomodar todos los eventos */
+  background-color: red;
+}
+.componentesDetalles {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+/* Style for the icons */
+.componentesDetalles svg {
+  margin-right: 10px;
+  color: #5a7c9e; /* Change this to the color you want for the icons */
+  font-size: 1.5em; /* Adjust the size of the icons as needed */
+}
+ 
+/* Style for the text */
+.componentesDetalles p {
+  margin: 0;
+  font-size: 1em;
+  color: #333; /* Text color */
+}
+
+.event-maquila {
+  background-color: #6e4bc0; /* Rojo claro */
+  width: 18px;
+  border-radius: 10px;
+  color: transparent;
+}
+
+.event-flexo {
+  background-color: #61acc5; /* Azul claro */
+  width: 18px;
+  border-radius: 10px;
+  color: transparent;
+}
+
+.event-suajadora {
+  background-color:#d66e32; /* Verde claro */
+  width: 18px;
+  border-radius: 10px;
+  color: transparent;
+}
+
+.event-entrega {
+  background-color: #418138; /* Amarillo */
+  width: 18px;
+  border-radius: 10px;
+  color: transparent;
+}
+
+.colors-menu{
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.colors-menu div {
+  display: flex;
+  align-items: center;
+  margin: 0%;
+}
+
+.colors-menu h6 {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 2px;
+}
