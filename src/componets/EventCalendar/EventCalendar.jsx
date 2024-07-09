@@ -7,6 +7,9 @@ import '../EventCalendar/EventCalendar.css';
 import { es } from 'date-fns/locale';
 import { useNavigate } from 'react-router-dom'; 
 
+//const API_URL = 'http://localhost:5000';
+const API_URL = 'http://192.168.1.200:5000';
+
 const EventCalendar = () => {
   const navigate = useNavigate();
   const [events, setEvents] = useState([]);
@@ -24,7 +27,7 @@ const EventCalendar = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:5000/eventos/');
+      const response = await axios.get(API_URL+'/eventos/');
       setEvents(response.data.Data.map(event => ({
         event_id: event.id,
         tipo: event.tipo,
@@ -70,9 +73,9 @@ const EventCalendar = () => {
 
     try {
       if (action === "edit") {
-        await axios.put(`http://127.0.0.1:5000/eventos/${event.event_id}`, upperCaseEvent);
+        await axios.put(API_URL+ '/${event.event_id}', upperCaseEvent);
       } else if (action === "create") {
-        await axios.post('http://127.0.0.1:5000/eventos/', upperCaseEvent);
+        await axios.post(API_URL+'/eventos/', upperCaseEvent);
       }
       fetchEvents();
       setShowForm(false);
@@ -125,7 +128,7 @@ const EventCalendar = () => {
 
   const handleBajaEvent = async (eventId) => {
     try {
-      await axios.put(`http://127.0.0.1:5000/eventos/baja-evento/${eventId}`);
+      await axios.put(API_URL+'/eventos/baja-evento/${eventId}');
       fetchEvents();
     } catch (error) {
       console.error('Error deleting event:', error);
