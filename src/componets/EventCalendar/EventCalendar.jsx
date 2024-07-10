@@ -8,13 +8,14 @@ import { es } from 'date-fns/locale';
 import { useNavigate } from 'react-router-dom'; 
 
 //const API_URL = 'http://localhost:5000';
-const API_URL = 'http://192.168.1.200:5000';
+const API_URL = 'http://192.168.100.5:5000';
+//const API_URL = 'http://192.168.1.200:5000';
 
 const EventCalendar = () => {
   const navigate = useNavigate();
   const [events, setEvents] = useState([]);
   const [selectedEvent, setSelectedEvent] = useState(null);
-  const [showForm, setShowForm] = useState(false);
+  //const [showForm, setShowForm] = useState(false);
   const [formValues, setFormValues] = useState({
     title: '',
     description: '',
@@ -73,12 +74,12 @@ const EventCalendar = () => {
 
     try {
       if (action === "edit") {
-        await axios.put(API_URL+ '/${event.event_id}', upperCaseEvent);
+        await axios.put(`${API_URL}/eventos/${event.event_id}`, upperCaseEvent);
       } else if (action === "create") {
-        await axios.post(API_URL+'/eventos/', upperCaseEvent);
+        await axios.post(`${API_URL}/eventos/`, upperCaseEvent);
       }
       fetchEvents();
-      setShowForm(false);
+      //setShowForm(false);
       return {
         ...event,
         event_id: event.event_id || Math.random()
@@ -101,7 +102,7 @@ const EventCalendar = () => {
         tipo: event.tipo || '',
         op: event.op || ''
       });
-      setShowForm(false);
+      //setShowForm(false);
     } else {
       console.error('El evento seleccionado no tiene título o fecha inicial/final válida.');
     }
@@ -128,7 +129,7 @@ const EventCalendar = () => {
 
   const handleBajaEvent = async (eventId) => {
     try {
-      await axios.put(API_URL+'/eventos/baja-evento/${eventId}');
+      await axios.put(`${API_URL}/eventos/baja-evento/${eventId}`);//API_URL+'/eventos/baja-evento/${eventId}'
       fetchEvents();
     } catch (error) {
       console.error('Error deleting event:', error);
@@ -168,12 +169,14 @@ const EventCalendar = () => {
         fields={[
           {
             name: "op",
+            value: formValues.op,
             type: "input",
             config: { label: "OP", multiline: false, rows: 1 }
           },
           {
             name: "tipo",
             type: "select",
+            value: formValues.tipo,
             options: [
               { id: 1, text: "MAQUILA", value: "M" },
               { id: 2, text: "FLEXO", value: "F" },
@@ -184,11 +187,13 @@ const EventCalendar = () => {
           },
           {
             name: "description",
+            value: formValues.description,
             type: "input",
             config: { label: "Descripción", multiline: true, rows: 4 }
           },
           {
             name: "equipos",
+            value: formValues.equipos,
             type: "input",
             config: { label: "Equipos", multiline: true, rows: 4 }
           }
