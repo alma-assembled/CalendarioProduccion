@@ -13,7 +13,7 @@ RUN npm install
 COPY . .
 
 # Construir la aplicación para producción
-RUN npm run build
+#RUN npm run build
 
 # Exponer el puerto en el que Nginx correrá
 EXPOSE 3000

@@ -20,7 +20,7 @@ const EventForm = () => {
 
     useEffect(() => {
         fetchEventos();
-    }, []);
+    }, [fetchEventos]);
 
     const fetchEventos = async () => {
         const response = await axios.get('http://localhost:5000/eventos');
