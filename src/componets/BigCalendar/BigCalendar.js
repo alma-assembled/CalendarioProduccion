@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './BigCalendar.css'; // Estilo CSS para la tabla
+import { useNavigate } from 'react-router-dom'; 
+import { Button } from '@mui/material';
 
 const API_URL = 'http://192.168.1.200:5000';
 
 const EventTable = () => {
   const [events, setEvents] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchEvents();
@@ -99,6 +102,10 @@ const EventTable = () => {
       </tr>
     ));
   };
+  const handleRedirect = () => {
+    navigate('/');
+  };
+
   return (
     <div className="event-table-container">
       <h2>Producción Assembled</h2>
@@ -124,6 +131,10 @@ const EventTable = () => {
             </div><h6>ENTREGA</h6>
           </div>
         </div>
+
+        <div className="view-mode-buttons">
+        <Button onClick={handleRedirect}>VER CALENDARIO</Button>
+      </div>
 
       <table className="event-table">
         <thead>
