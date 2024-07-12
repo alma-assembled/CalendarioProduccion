@@ -8,8 +8,8 @@ import { es } from 'date-fns/locale';
 import { useNavigate } from 'react-router-dom'; 
 
 //const API_URL = 'http://localhost:5000';
-const API_URL = 'http://192.168.100.5:5000';
-//const API_URL = 'http://192.168.1.200:5000';
+//const API_URL = 'http://192.168.100.5:5000';
+const API_URL = 'http://192.168.1.200:5000';
 
 const EventCalendar = () => {
   const navigate = useNavigate();

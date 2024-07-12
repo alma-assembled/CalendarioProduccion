@@ -3,8 +3,8 @@ import axios from 'axios';
 import './BigCalendar.css'; // Estilo CSS para la tabla
 
 //const API_URL = 'http://localhost:5000';
-const API_URL = 'http://192.168.100.5:5000/';
-//const API_URL = 'http://192.168.1.200:5000';
+//const API_URL = 'http://192.168.100.5:5000/';
+const API_URL = 'http://192.168.1.200:5000';
 
 const EventTable = () => {
   const [events, setEvents] = useState([]);
