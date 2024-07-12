@@ -26,7 +26,7 @@ const EventCalendar = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get(API_URLL+'/eventos/');
+      const response = await axios.get(`${API_URLL}/eventos`);
       setEvents(response.data.Data.map(event => ({
         event_id: event.id,
         tipo: event.tipo,
