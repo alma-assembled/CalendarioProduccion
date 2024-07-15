@@ -6,6 +6,7 @@ import { FaDropbox, FaBoxesStacked, FaPeopleCarryBox, FaRegChartBar } from 'reac
 import '../EventCalendar/EventCalendar.css';
 import { es } from 'date-fns/locale';
 import { useNavigate } from 'react-router-dom'; 
+import logo  from './../../recursos/logo.jpg';
 
 const API_URLL = 'http://192.168.1.200:5000';
 
@@ -140,7 +141,13 @@ const EventCalendar = () => {
 
   return (
     <div className="container">
-      <h1 className="calendar-title">PRODUCCIÓN ASSEMBLED</h1>
+      <header>
+        <div className="title-container">
+          <h1 className="calendar-title">PRODUCCIÓN ASSEMBLED</h1>
+        </div>
+        <img src={logo} alt="Logo"/>
+      </header>
+
       <div className='colors-menu'>
         <div>
           <div className='event-maquila'>.</div><h6>MAQUILA</h6>

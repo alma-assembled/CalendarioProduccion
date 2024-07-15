@@ -2,17 +2,33 @@
 
 .container {
   width: 90%;
-  margin: 0 auto;
   padding: 50px;
+  margin: 0 auto;
   font-family: Arial, sans-serif;
-  background-color:  #ffffff;
-  border: 1px solid  #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+header img {
+  height: 500px; /* Mantén la proporción de la imagen */
+  width: 100%; /* Ajusta el tamaño del logo */
+  max-width: 500px; /* Ajusta el tamaño máximo del logo */
+  max-height: 500px; /* Asegúrate de que no exceda una altura máxima */
+  object-fit: contain; /* Asegúrate de que la imagen no se deforme */
+} 
+
+header .title-container {
+  flex-grow: 1;
+  text-align: center; /* Centra el título horizontalmente */
+}
+
+
 .calendar-title {
-  text-align: center;
   color:  #044554;
   font-size: 24px;
   margin-bottom: 20px;
