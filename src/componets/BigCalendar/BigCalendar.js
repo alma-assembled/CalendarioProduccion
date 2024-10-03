@@ -17,7 +17,7 @@ const EventTable = () => {
     try {
       // Simulando la carga de eventos desde una API
       const response = await axios.get(API_URL+'/eventos');
-      setEvents(response.data.Data);
+      setEvents(response.data.Data || []);
     } catch (error) {
       console.error('Error fetching events:', error);
     }
