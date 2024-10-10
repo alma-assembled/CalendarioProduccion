@@ -1,8 +1,8 @@
  // src/services/eventService.js
 import axios from 'axios';
 
-//const API_URL = 'http://localhost:5000';
-const API_URL = 'http://192.168.1.200:5000';
+const API_URL = 'http://localhost:5000';
+//const API_URL = 'http://192.168.1.200:5000';
 
 export const fetchEvents = async () => {
   try {
