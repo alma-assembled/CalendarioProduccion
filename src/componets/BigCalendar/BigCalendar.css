@@ -85,6 +85,11 @@ h2 {
     
 }
 
+.H{
+  background-color: #e23b3b;;
+    border-radius: 5px;
+}
+
 .event-maquila {
   background-color: #6e4bc0; /* Rojo claro */
   width: 18px;
@@ -108,6 +113,12 @@ h2 {
 
 .event-entrega {
   background-color: #418138; /* Amarillo */
+  width: 18px;
+  border-radius: 10px;
+  color: transparent;
+}
+.event-heinz {
+  background-color: #e23b3b; /* Amarillo */
   width: 18px;
   border-radius: 10px;
   color: transparent;

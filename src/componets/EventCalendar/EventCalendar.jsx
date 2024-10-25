@@ -8,7 +8,8 @@ import { es } from 'date-fns/locale';
 import { useNavigate } from 'react-router-dom'; 
 import logo  from './../../recursos/logo.jpg';
 
-const API_URLL = 'http://192.168.1.200:5000';
+//const API_URLL = 'http://192.168.1.200:5000';
+const API_URLL = 'http://127.0.0.1:5000';
 
 const EventCalendar = () => {
   const navigate = useNavigate();
@@ -121,6 +122,8 @@ const EventCalendar = () => {
         return '#d66e32';
       case 'E':
         return '#418138';
+      case 'H':
+          return '#e23b3b';
       default:
         return '#d3d3d3';
     }
@@ -160,6 +163,9 @@ const EventCalendar = () => {
         </div>
         <div>
           <div className='event-entrega'>.</div><h6>ENTREGA</h6>
+        </div>
+        <div>
+          <div className='event-heinz'>.</div><h6>HEINZ</h6>
         </div>
       </div>
       <div className="view-mode-buttons">
