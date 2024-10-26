@@ -101,7 +101,12 @@
   border-radius: 10px;
   color: transparent;
 }
-
+.event-heinz {
+  background-color: #e23b3b; /* Amarillo */
+  width: 18px;
+  border-radius: 10px;
+  color: transparent;
+}
 .colors-menu{
   width: 130px;
   display: flex;

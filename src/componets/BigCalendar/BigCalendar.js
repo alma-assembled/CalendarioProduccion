@@ -125,6 +125,11 @@ const EventTable = () => {
               .
             </div><h6>ENTREGA</h6>
           </div>
+          <div>
+            <div className='event-heinz'>
+              .
+            </div><h6>HEINZ</h6>
+          </div>
         </div>
 
       <table className="event-table">

@@ -122,6 +122,8 @@ const EventCalendar = () => {
         return '#d66e32';
       case 'E':
         return '#418138';
+      case 'H':
+          return '#e23b3b';
       default:
         return '#d3d3d3';
     }
@@ -155,6 +157,9 @@ const EventCalendar = () => {
         </div>
         <div>
           <div className='event-entrega'>.</div><h6>ENTREGA</h6>
+        </div>
+        <div>
+          <div className='event-heinz'>.</div><h6>HEINZ</h6>
         </div>
       </div>
       <div className="view-mode-buttons">
