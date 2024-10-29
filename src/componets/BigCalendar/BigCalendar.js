@@ -138,6 +138,9 @@ const EventTable = () => {
             </div><h6>ENTREGA</h6>
           </div>
           <div>
+            <div className='event-entrega'>.</div><h6>RECIBOS MAQUILA</h6>
+          </div>
+          <div>
           <div className='event-heinz'>.</div><h6>HEINZ</h6>
         </div>
         </div>

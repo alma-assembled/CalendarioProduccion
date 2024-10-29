@@ -122,8 +122,11 @@ const EventCalendar = () => {
         return '#d66e32';
       case 'E':
         return '#418138';
+      case 'RM':
+          return '#418138';
       case 'H':
           return '#e23b3b';
+
       default:
         return '#d3d3d3';
     }
@@ -165,6 +168,9 @@ const EventCalendar = () => {
           <div className='event-entrega'>.</div><h6>ENTREGA</h6>
         </div>
         <div>
+          <div className='event-entrega'>.</div><h6>RECIBOS MAQUILA</h6>
+        </div>
+        <div>
           <div className='event-heinz'>.</div><h6>HEINZ</h6>
         </div>
       </div>
@@ -194,6 +200,7 @@ const EventCalendar = () => {
               { id: 3, text: "SUAJADORA", value: "S" },
               { id: 4, text: "ENTREGA", value: "E" },
               { id: 5, text: "HEINZ", value: "H" }
+              { id: 6, text: "RECIBOS MAQUILA", value: "H" }
             ],
             config: { label: "Tipo", multiline: true, errMsg: "Introduce un tipo" }
           },
