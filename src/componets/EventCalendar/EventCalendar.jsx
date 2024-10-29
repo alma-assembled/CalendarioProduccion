@@ -7,7 +7,6 @@ import '../EventCalendar/EventCalendar.css';
 import { es } from 'date-fns/locale';
 import { useNavigate } from 'react-router-dom'; 
 import logo  from './../../recursos/logo.jpg';
-import { parse } from 'date-fns'; 
 
 const API_URLL = 'http://192.168.1.200:5000';
 //const API_URLL = 'http://127.0.0.1:5000';
@@ -35,8 +34,8 @@ const EventCalendar = () => {
         tipo: event.tipo,
         op: event.op,
         title: event.titulo,
-        start: parse(event.fecha_inicio, 'yyyy-MM-dd HH:mm:ss', new Date()), // Uso de date-fns
-        end: parse(event.fecha_fin, 'yyyy-MM-dd HH:mm:ss', new Date()),   
+        start: new Date(event.fecha_inicio),
+        end: new Date(event.fecha_fin),
         description: event.descripcion,
         equipos: event.equipos,
         color: getEventClass(event.tipo)
