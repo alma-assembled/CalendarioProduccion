@@ -34,8 +34,8 @@ const EventCalendar = () => {
         tipo: event.tipo,
         op: event.op,
         title: event.titulo,
-        start: new Date(event.fecha_inicio),
-        end: new Date(event.fecha_fin),
+        start: parse(event.fecha_inicio, 'yyyy-MM-dd HH:mm:ss', new Date()), // Uso de date-fns
+        end: parse(event.fecha_fin, 'yyyy-MM-dd HH:mm:ss', new Date()),   
         description: event.descripcion,
         equipos: event.equipos,
         color: getEventClass(event.tipo)
