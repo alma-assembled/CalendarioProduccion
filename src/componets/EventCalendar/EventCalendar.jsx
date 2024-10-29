@@ -199,8 +199,8 @@ const EventCalendar = () => {
               { id: 2, text: "FLEXO", value: "F" },
               { id: 3, text: "SUAJADORA", value: "S" },
               { id: 4, text: "ENTREGA", value: "E" },
-              { id: 5, text: "HEINZ", value: "H" }
-              { id: 6, text: "RECIBOS MAQUILA", value: "H" }
+              { id: 5, text: "HEINZ", value: "H" },
+              { id: 6, text: "RECIBOS MAQUILA", value: "RM" }
             ],
             config: { label: "Tipo", multiline: true, errMsg: "Introduce un tipo" }
           },
