@@ -34,8 +34,8 @@ const EventCalendar = () => {
         tipo: event.tipo,
         op: event.op,
         title: event.titulo,
-        start: new Date(event.fecha_inicio.replace(' ', 'T')),
-        end: new Date(event.fecha_fin.replace(' ', 'T')),
+        start: new Date(event.fecha_inicio),
+        end: new Date(event.fecha_fin),
         description: event.descripcion,
         equipos: event.equipos,
         color: getEventClass(event.tipo)
