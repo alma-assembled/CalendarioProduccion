@@ -100,7 +100,7 @@ const EventCalendar = () => {
         end: event.end.toISOString().substring(0, 19),
         equipos: event.equipos || '',
         tipo: event.tipo || '',
-        op: event.op || ''
+        op: event.op
       });
       //setShowForm(false);
     } else {
