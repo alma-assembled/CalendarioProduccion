@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
 import logo  from './../../recursos/logo.jpg';
 
-//const API_URL = 'http://192.168.1.200:5000';
-const API_URL = 'http://127.0.0.1:5000';
+const API_URL = 'http://192.168.1.200:5000';
+//const API_URL = 'http://127.0.0.1:5000';
 
 const EventTable = () => {
   const [events, setEvents] = useState([]);
