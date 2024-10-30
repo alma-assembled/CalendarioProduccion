@@ -85,6 +85,12 @@ h2 {
     
 }
 
+.RM {
+  background-color: #418138;
+  border-radius: 5px;
+  
+}
+
 .H{
   background-color: #e23b3b;;
     border-radius: 5px;
@@ -117,6 +123,7 @@ h2 {
   border-radius: 10px;
   color: transparent;
 }
+
 .event-heinz {
   background-color: #e23b3b; /* Amarillo */
   width: 18px;
